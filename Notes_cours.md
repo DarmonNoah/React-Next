@@ -19,7 +19,7 @@ Vite sert a mettre en place son application, rapide et performant, il sert à fa
 En react tous les composants sont des fonctions.  
 Un composant est donc une fonction qui return du JSX.  
 En React "<>" permet de rendre le DOM plu lisible.  
-React mets à jour le DOM avec les hooks.  
+React mets à jour le DOM avec les hooks.  S
 Hook permet de gérer l'état et le cycle de vie des rendues.  
 Ce sont des fonctions qui commencent par use (convention).  
 On peut utiliser une fonction pour mettre a jour le states.  
@@ -27,7 +27,10 @@ Cette syntaxe "setName((prev)=>{return prev + "vite";})" est utile quand on veut
 Les composants React communiquent entre eux avec des props.  
 Tous les composants peuvent recevoir en parametre des props. 
 Ce sont des objets dont l'utilisation est similaire a celle des attributs html.  
-Les props sont utile lorsqu'on veut passer d'enfant à parents, au dela ils deviennent dépassés.
+Les props sont utile lorsqu'on veut passer d'enfant à parents, au dela ils deviennent dépassés.  
+La props "children" est présente dans tous les ocmposants de base.  
+
+tester useeffect, usecontext et api context.  
 
 # Consignes TP React:
 
