@@ -1,27 +1,31 @@
-import { useState } from 'react';
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css';
-import Profile from './components/profile';
+/* eslint-disable react/jsx-no-target-blank */
+import { useState } from "react";
+import "./App.css";
+import Profile from "./components/Profile/profile";
+import PropsExample from "./components/PropsExample/PropsExample";
 
 function App() {
-  const [name, setName]=useState("React")
- // console.log(name);
 
-function onClickHandler(){
-  setName("Vite");
+  const [name, setName] = useState("React");
 
-  setName((prev)=>{return prev + "vite";})
-}
+  function onClickHandler(test) {
+    setName("Vite");
+    console.log("je proviens du composant enfant: ", test);
+
+    setName((prev) => {
+      return prev + "Vite";
+    });
+  }
 
   return (
     <>
       <h1>Vite + React</h1>
-      <div className="card">{name}</div>
-        <button onClick={onClickHandler}>click me ! </button>
-        <Profile/>
+
+      <Profile />
+
+     <PropsExample name={name} childClickHandler={onClickHandler} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
