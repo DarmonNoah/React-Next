@@ -22,3 +22,5 @@ En React "<>" permet de rendre le DOM plu lisible.
 React mets à jour le DOM avec les hooks.  
 Hook permet de gérer l'état et le cycle de vie des rendues.  
 Ce sont des fonctions qui commencent par use (convention).  
+On peut utiliser une fonction pour mettre a jour le states.  
+Cette syntaxe "setName((prev)=>{return prev + "vite";})" est utile quand on veut mettre un state dont la valeur depend de la valeur précédente.  
