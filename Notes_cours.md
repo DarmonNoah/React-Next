@@ -24,3 +24,7 @@ Hook permet de gérer l'état et le cycle de vie des rendues.
 Ce sont des fonctions qui commencent par use (convention).  
 On peut utiliser une fonction pour mettre a jour le states.  
 Cette syntaxe "setName((prev)=>{return prev + "vite";})" est utile quand on veut mettre un state dont la valeur depend de la valeur précédente.  
+Les composants React communiquent entre eux avec des props.  
+Tous les composants peuvent recevoir en parametre des props. 
+Ce sont des objets dont l'utilisation est similaire a celle des attributs html.  
+Les props sont utile lorsqu'on veut passer d'enfant à parents, au dela ils deviennent dépassés.
