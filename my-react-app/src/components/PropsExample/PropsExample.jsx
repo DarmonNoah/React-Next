@@ -7,31 +7,34 @@ export default function PropsExample({ name, childClickHandler }) {
   const data = [
     {
       id : 1,
-      name: "bbb",
-      surname: "ppp",
-      email: "b.p.sodales@hotmail.ca",
-      adresse: "222-6020 Enim. Av.",
+      name: "darm",
+      surname: "noah",
+      email: "noah.darm@isitech.fr",
+      address: "222-6020 Enim. Av.",
       phone: "0101010101",
     }
   ];
 
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   return (
     <>
-      <ul>
+      <div>
       {data.map((item) => (
       <>
-        <li key={item.id}>
-          <div>{item.name}</div>
-          <div>{item.surname}</div>
-          <div>{item.email}</div>
-          <div>{item.address}</div>
-          <div>{item.phone}</div>
-        </li>
+        <div key={item.id}>
+        
+          <div>nom : {item.name}</div>
+          <div>prénom : {item.surname}</div>
+          <br/>
+          <div>email : {item.email}</div>
+          <div>adresse : {item.address}</div>
+          <br/>
+          <div>téléphone : {item.phone}</div>
+          </div>
         <br />
       </>
       ))}
-      </ul>
+      </div>
 
       <button
         onClick={() => {
