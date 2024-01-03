@@ -1,20 +1,19 @@
 import React, { useLayoutEffect, useState } from "react";
 
-export default function PropsExample({ name, surname, email, address, phone }) {
+export default function PropsExample({ data, childHandleSubmit }) {
 
-  const [formData, setFormData] = useState({name: name,surname: surname,email: email,address: address, phone: phone});
+  const [formData, setFormData] = useState(data);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormData((prevFormData) => ({ ...prevFormData, [name]: value, [surname]: value, [email]: value, [address]: value, [phone]: value }));
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`name : ${formData.name}, surname : ${formData.surname}, email : ${formData.email}, address : ${formData.address}, phone : ${formData.phone}`
-    );
+    childHandleSubmit(formData);
     setVisible(!visible);
-};
+  };
 
   const [visible, setVisible] = useState(false);
   return (

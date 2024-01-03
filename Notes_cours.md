@@ -30,9 +30,9 @@ Ce sont des objets dont l'utilisation est similaire a celle des attributs html.
 Les props sont utile lorsqu'on veut passer d'enfant à parents, au dela ils deviennent dépassés.  
 La props "children" est présente dans tous les ocmposants de base.  
 
-tester useeffect, usecontext et api context.  
-
 # Consignes TP React:
+
+Partie 1:
 
 - [ ] Créer un nouveau projet React avec vite
 - [ ] Créer un composant `App`
@@ -45,6 +45,7 @@ tester useeffect, usecontext et api context.
 - [ ] Utilisez les props
 - [ ] Utilisez les states
 - [ ] L'application doit etre responsive (mobile first)
+// il me reste a rendre responsive l'app
 
 Partie 2:
 
@@ -53,3 +54,8 @@ Partie 2:
 - [ ] Créer un composant `List` qui affiche une liste de profil utilisateur
 - [ ] Creer un formulaire qui permet d'ajouter un profil utilisateur à la liste
 - [ ] Trouvez un moyen de filtrer la liste des profils par annee de naissance par exemple
+(tester useeffect, usecontext et api context.)  
+
+Hook : permet a effectuer des action à n'importe quel moment du cycle de vie.  
+Utilité : placer tout ses "sideEffects"  
+Useeffect : fait en sorte que quelquechose qui ne provient pas de react marche dans react.  

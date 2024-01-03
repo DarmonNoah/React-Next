@@ -3,6 +3,6 @@ import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <div className={styles.rouge}> créé par moi même</div>
+    <div className={styles.rouge}> créé par Noah DARMON</div>
   )
 }

@@ -5,7 +5,7 @@ import PropsExample from "./../PropsExample/PropsExample";
 
 function Profile() {
 
-    const data = [
+    const [data, setData] = useState([
       {
         id : 1,
         name: "darm",
@@ -14,32 +14,32 @@ function Profile() {
         address: "222-6020 Enim. Av.",
         phone: "0101010101",
       }
-    ];
-    const name = data.name;
-    const surname = data.surname;
-    const email = data.email;
-    const address = data.address;
-    const phone = data.phone;
+    ]);
+    
+
+    const handleSubmit = (formData) => {
+      setData([{id: 1, ...formData}])
+  };
 
   return (
     <>
-      {data.map((item) => (
+      {data.map((data) => (
       <>
-        <div key={item.id}>
+        <div key={data.id}>
         
-          <div>nom : {item.name}</div>
-          <div>prénom : {item.surname}</div>
+          <div>nom : {data.name}</div>
+          <div>prénom : {data.surname}</div>
           <br/>
-          <div>email : {item.email}</div>
-          <div>adresse : {item.address}</div>
+          <div>email : {data.email}</div>
+          <div>adresse : {data.address}</div>
           <br/>
-          <div>téléphone : {item.phone}</div>
+          <div>téléphone : {data.phone}</div>
           </div>
         <br />
       </>
       ))}
 
-    <PropsExample name={name} surname={surname} email={email} address={address} phone={phone}/>
+    <PropsExample data={data} childHandleSubmit={handleSubmit}/>
     </>
   )
 }

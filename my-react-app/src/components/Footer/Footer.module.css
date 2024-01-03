@@ -1,3 +1,9 @@
 .rouge {
     color: red;
+    text-align: center;
+    padding: 5px;
+    position: absolute; 
+    left : 44%;
+    bottom: 0; 
+    z-index: 10;
   }
