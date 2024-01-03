@@ -3,6 +3,8 @@ Dom = Document Object Model est une interface de programmation normalisée par l
 Dans le dev Js (react ou next) on a tendance à utiliser comme page principale une page "index" en html, c'est celle qui est affiché en permanence.  
 On appel ce type d'application des "SPA"(Single-page application) car tout ce passe dans une seule page web, tout est simulé par la partie JS pour limiter les intéractions avec le serveur, l'inconvénient principal est que c'est le navigateur qui va se charger de tout(l'app peut donc consommer beaucoup de RAM).  
 Lighthouse : plugin pour connaitre le référencement d'un site.  
+Le TypeScript est une surcouche de JavaScript qui permet de typer les variables, cela rend le Js moins "libre" et plus encadré (utile uniquement pour le développeur, le client n'est pas impacté par le Ts).  
+Outils autres : chadCN & Tailwind(css) & AG Grid(tab compatible avec react/js)  
 
 # Partie React
 
@@ -86,4 +88,9 @@ Next est open source (accessible sur gitHub).
 
 ## Installation
 
-//same
+- explications du professeur à insérer ici.  
+
+# Consignes TP Next
+
+## Partie 1 - Tutoriel
+Suivre le tuto
