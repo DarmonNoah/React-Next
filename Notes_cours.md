@@ -32,7 +32,7 @@ La props "children" est présente dans tous les ocmposants de base.
 
 # Consignes TP React:
 
-Partie 1:
+## Partie 1:
 
 - [ ] Créer un nouveau projet React avec vite
 - [ ] Créer un composant `App`
@@ -47,15 +47,26 @@ Partie 1:
 - [ ] L'application doit etre responsive (mobile first)
 // il me reste a rendre responsive l'app
 
-Partie 2:
+## Partie 2:
 
 - [ ] Creer un nouveau projet React avec Vite
 - [ ] Cette fois ci l'application permettra de gerer les elements d'une liste a l'aide d'un formulaire
 - [ ] Créer un composant `List` qui affiche une liste de profil utilisateur
 - [ ] Creer un formulaire qui permet d'ajouter un profil utilisateur à la liste
-- [ ] Trouvez un moyen de filtrer la liste des profils par annee de naissance par exemple
+- [ ] Trouvez un moyen de filtrer la liste des profils par annee de naissance par exemple  
 (tester useeffect, usecontext et api context.)  
+(utiliser useReducer au lieu de useState.)  
 
-Hook : permet a effectuer des action à n'importe quel moment du cycle de vie.  
-Utilité : placer tout ses "sideEffects"  
 Useeffect : fait en sorte que quelquechose qui ne provient pas de react marche dans react.  
+Utilité : placer tout ses "sideEffects".  
+Systeme de login pour ne pas utiliser un systeme de props. 
+Hook : permet a effectuer des action à n'importe quel moment du cycle de vie.  
+L'etat est géré par le hook.  
+Reducer: The reducer function that specifies how the state gets updated. It must be pure, should take the state and action as arguments, and should return the next state. State and action can be of any types.  
+HookUseReducer permet de récupérer le state dans sa version la plus récente.  
+API context permet de partager une fonction reducer ou une variable dans toute l'application.
+-context provider = composant react  
+-props.children -> a way to pass the state data to a component as the props  
+Donc au lieu de state et useState utiliser plutot state et dispatch afin de rendre disponible un reducer ou une variable dans toute l'app.  
+### Schéma :  
+![Cours](store.png "Schéma")  
