@@ -5,6 +5,11 @@ On appel ce type d'application des "SPA"(Single-page application) car tout ce pa
 Lighthouse : plugin pour connaitre le référencement d'un site.  
 Le TypeScript est une surcouche de JavaScript qui permet de typer les variables, cela rend le Js moins "libre" et plus encadré (utile uniquement pour le développeur, le client n'est pas impacté par le Ts).  
 Outils autres : chadCN & Tailwind(css) & AG Grid(tab compatible avec react/js)  
+jsx + ts = tsx  
+rout = Next.js uses a file-system based router where folders are used to define routes.  
+Each folder represents a route segment that maps to a URL segment. To create a nested route, you can nest folders inside each other.  
+app correspond à / et dashboard correspond donc à /dashboard.  
+![Cours](routes.png "Schéma")  
 
 # Partie React
 
@@ -93,4 +98,5 @@ Next est open source (accessible sur gitHub).
 # Consignes TP Next
 
 ## Partie 1 - Tutoriel
-Suivre le tuto
+Suivre le tuto  
+tout ce qui est destiné a etre une page -> dans le dossier app  
