@@ -4,6 +4,7 @@ Dans le dev Js (react ou next) on a tendance à utiliser comme page principale u
 On appel ce type d'application des "SPA"(Single-page application) car tout ce passe dans une seule page web, tout est simulé par la partie JS pour limiter les intéractions avec le serveur, l'inconvénient principal est que c'est le navigateur qui va se charger de tout(l'app peut donc consommer beaucoup de RAM).  
 
 # Partie React
+
 ## Intro
 React est une bibliothèque JavaScript libre. Elle est maintenue par Meta ainsi que par une communauté de développeurs individuels et d'entreprises depuis 2013.
 
@@ -15,7 +16,7 @@ npm run dev
 
 Vite sert a mettre en place son application, rapide et performant, il sert à faciliter le travail avec react.
 
-## Infos et Voc en React
+### Infos et Voc Part-1
 En react tous les composants sont des fonctions.  
 Un composant est donc une fonction qui return du JSX.  
 En React "<>" permet de rendre le DOM plu lisible.  
@@ -30,10 +31,9 @@ Ce sont des objets dont l'utilisation est similaire a celle des attributs html.
 Les props sont utile lorsqu'on veut passer d'enfant à parents, au dela ils deviennent dépassés.  
 La props "children" est présente dans tous les ocmposants de base.  
 
-# Consignes TP React:
+# Consignes TP React
 
-## Partie 1:
-
+## Partie 1
 - [ ] Créer un nouveau projet React avec vite
 - [ ] Créer un composant `App`
 - [ ] Créer un composant `Header`
@@ -47,8 +47,7 @@ La props "children" est présente dans tous les ocmposants de base.
 - [ ] L'application doit etre responsive (mobile first)
 // il me reste a rendre responsive l'app
 
-## Partie 2:
-
+## Partie 2
 - [ ] Creer un nouveau projet React avec Vite
 - [ ] Cette fois ci l'application permettra de gerer les elements d'une liste a l'aide d'un formulaire
 - [ ] Créer un composant `List` qui affiche une liste de profil utilisateur
@@ -57,10 +56,11 @@ La props "children" est présente dans tous les ocmposants de base.
 (tester useeffect, usecontext et api context.)  
 (utiliser useReducer au lieu de useState.)  
 
+### Infos et Voc Part-2
 Useeffect : fait en sorte que quelquechose qui ne provient pas de react marche dans react.  
 Utilité : placer tout ses "sideEffects".  
 Systeme de login pour ne pas utiliser un systeme de props. 
-Hook : permet a effectuer des action à n'importe quel moment du cycle de vie.  
+Hook : fonction mis a disposition part la bibliotheque react qui permet de gérer les cycles de vies de composants react.
 L'etat est géré par le hook.  
 Reducer: The reducer function that specifies how the state gets updated. It must be pure, should take the state and action as arguments, and should return the next state. State and action can be of any types.  
 HookUseReducer permet de récupérer le state dans sa version la plus récente.  
@@ -70,3 +70,13 @@ API context permet de partager une fonction reducer ou une variable dans toute l
 Donc au lieu de state et useState utiliser plutot state et dispatch afin de rendre disponible un reducer ou une variable dans toute l'app.  
 ### Schéma :  
 ![Cours](store.png "Schéma")  
+
+# Partie Next
+
+## Intro
+Next est un framework React qui permet de créer des applications Web.  
+Le framework se charge d'apporter tous les outils de bunling, compilation et bien plus...  
+Next utilise des composants react pour l'interface et apporte de l'optimisation pour le referencement ainsi qu'en performance.  
+Next est open source (accessible sur gitHub).
+
+## Principales fonctionnalités

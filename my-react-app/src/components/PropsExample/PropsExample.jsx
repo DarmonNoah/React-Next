@@ -18,7 +18,6 @@ export default function PropsExample({ data, childHandleSubmit }) {
   const [visible, setVisible] = useState(false);
   return (
     <>
-
       <button
         onClick={() => {
           setVisible(!visible);
@@ -43,7 +42,7 @@ export default function PropsExample({ data, childHandleSubmit }) {
 
     <label htmlFor="phone">Téléphone:</label>
     <input id="phone" name="phone" value={formData.phone} onChange={handleChange}/>
-
+    <br/>
     <button type="submit">Enregistrer</button>
 
   </form>
