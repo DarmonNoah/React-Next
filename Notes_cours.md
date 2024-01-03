@@ -2,6 +2,7 @@
 Dom = Document Object Model est une interface de programmation normalisée par le W3C, qui permet à des scripts d'examiner et de modifier le contenu du navigateur web.  
 Dans le dev Js (react ou next) on a tendance à utiliser comme page principale une page "index" en html, c'est celle qui est affiché en permanence.  
 On appel ce type d'application des "SPA"(Single-page application) car tout ce passe dans une seule page web, tout est simulé par la partie JS pour limiter les intéractions avec le serveur, l'inconvénient principal est que c'est le navigateur qui va se charger de tout(l'app peut donc consommer beaucoup de RAM).  
+Lighthouse : plugin pour connaitre le référencement d'un site.  
 
 # Partie React
 
@@ -80,3 +81,9 @@ Next utilise des composants react pour l'interface et apporte de l'optimisation 
 Next est open source (accessible sur gitHub).
 
 ## Principales fonctionnalités
+
+- explications du professeur à insérer ici.  
+
+## Installation
+
+//same
