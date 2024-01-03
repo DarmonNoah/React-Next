@@ -98,5 +98,7 @@ Next est open source (accessible sur gitHub).
 # Consignes TP Next
 
 ## Partie 1 - Tutoriel
-Suivre le tuto  
+Suivre le tuto : https://nextjs.org/learn/dashboard-app  
 tout ce qui est destiné a etre une page -> dans le dossier app  
+en général on place dans le layout les parties static de l'app(header+footer)  
+--> créé a l'exterieur du dossier app (par exemple dans un dossier Ui)  
