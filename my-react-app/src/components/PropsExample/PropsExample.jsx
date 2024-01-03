@@ -1,62 +1,20 @@
 import React, { useLayoutEffect, useState } from "react";
-/* {[1, 2, 3, 4].map((item, i) => (
-  <div key={item}>{item}</div>
-))} */
 
-export default function PropsExample({ name, childClickHandler }) {
+export default function PropsExample({ name, surname, email, address, phone }) {
 
-  const [enteredTitle, setEnteredTitle] = useState("");
-  const [enteredAmount, setEnteredAmount] = useState("");
-  const [enteredDate, setEnteredDate] = useState("");
-  // const [userInput, setUserInput] = useState({
-  //   enteredTitle: '',
-  //   enteredAmount: '',
-  //   enteredDate: '',
-  // });
+  const [formData, setFormData] = useState({name: name,surname: surname,email: email,address: address, phone: phone});
 
-  const titleChangeHandler = (event) => {
-    setEnteredTitle(event.target.value);
-    // setUserInput({
-    //   ...userInput,
-    //   enteredTitle: event.target.value,
-    // });
-    // setUserInput((prevState) => {
-    //   return { ...prevState, enteredTitle: event.target.value };
-    // });
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value, [surname]: value, [email]: value, [address]: value, [phone]: value }));
   };
 
-  const amountChangeHandler = (event) => {
-    setEnteredAmount(event.target.value);
-    // setUserInput({
-    //   ...userInput,
-    //   enteredAmount: event.target.value,
-    // });
-  };
-
-  const dateChangeHandler = (event) => {
-    setEnteredDate(event.target.value);
-    // setUserInput({
-    //   ...userInput,
-    //   enteredDate: event.target.value,
-    // });
-  };
-
-  const submitHandler = (event) => {
-    console.log("event content: ", event);
+  const handleSubmit = (event) => {
     event.preventDefault();
-
-    const expenseData = {
-      title: enteredTitle,
-      amount: enteredAmount,
-      date: new Date(enteredDate),
-    };
-
-    props.onSaveExpenseData(expenseData);
-    setEnteredTitle("");
-    setEnteredAmount("");
-    setEnteredDate("");
-  };
-
+    alert(`name : ${formData.name}, surname : ${formData.surname}, email : ${formData.email}, address : ${formData.address}, phone : ${formData.phone}`
+    );
+    setVisible(!visible);
+};
 
   const [visible, setVisible] = useState(false);
   return (
@@ -71,49 +29,26 @@ export default function PropsExample({ name, childClickHandler }) {
       </button>
 
       {visible && (
-              <div>
-              <input type="text" placeholder="Your first name" />
-              <input type="text" placeholder="Your surname" />
-              <input type="text" placeholder="Your email" />
-              <input type="text" placeholder="Your adress" />
-              <input type="text" placeholder="Your phone number" pattern="[0-9]{10}" />
-              </div>
+    <form onSubmit={handleSubmit}>
+    <label htmlFor="name">Nom:</label>
+    <input type="text" id="name" name="name" value={formData.name} onChange={handleChange}/>
+
+    <label htmlFor="surname">Prénom:</label>
+    <input type="text" id="surname" name="surname" value={formData.surname} onChange={handleChange}/>
+
+    <label htmlFor="email">Email:</label>
+    <input type="email" id="email" name="email" value={formData.email} onChange={handleChange}/>
+
+    <label htmlFor="address">Adresse:</label>
+    <input id="address" name="address" value={formData.address} onChange={handleChange}/>
+
+    <label htmlFor="phone">Téléphone:</label>
+    <input id="phone" name="phone" value={formData.phone} onChange={handleChange}/>
+
+    <button type="submit">Enregistrer</button>
+
+  </form>
     )}
-        <form onSubmit={submitHandler}>
-        <div className="new-expense__controls">
-          <div className="new-expense__control">
-            <label>Title</label>
-            <input
-              type="text"
-              value={enteredTitle}
-              onChange={titleChangeHandler}
-            />
-          </div>
-          <div className="new-expense__control">
-            <label>Amount</label>
-            <input
-              type="number"
-              min="0.01"
-              step="0.01"
-              value={enteredAmount}
-              onChange={amountChangeHandler}
-            />
-          </div>
-          <div className="new-expense__control">
-            <label>Date</label>
-            <input
-              type="date"
-              min="2019-01-01"
-              max="2022-12-31"
-              value={enteredDate}
-              onChange={dateChangeHandler}
-            />
-          </div>
-        </div>
-        <div className="new-expense__actions">
-          <button type="submit">Add Expense</button>
-        </div>
-      </form>
     </>
   );
 }

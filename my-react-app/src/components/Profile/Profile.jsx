@@ -5,10 +5,6 @@ import PropsExample from "./../PropsExample/PropsExample";
 
 function Profile() {
 
-  const [name, setName] = useState("React");
-
-  function onClickHandler(test) {
-  }
     const data = [
       {
         id : 1,
@@ -19,11 +15,14 @@ function Profile() {
         phone: "0101010101",
       }
     ];
+    const name = data.name;
+    const surname = data.surname;
+    const email = data.email;
+    const address = data.address;
+    const phone = data.phone;
 
-  const [visible, setVisible] = useState(false);
   return (
     <>
-      <div>
       {data.map((item) => (
       <>
         <div key={item.id}>
@@ -39,8 +38,8 @@ function Profile() {
         <br />
       </>
       ))}
-      </div>
-    <PropsExample name={name} childClickHandler={onClickHandler} />
+
+    <PropsExample name={name} surname={surname} email={email} address={address} phone={phone}/>
     </>
   )
 }
