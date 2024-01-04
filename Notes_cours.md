@@ -99,6 +99,8 @@ Next est open source (accessible sur gitHub).
 
 ## Partie 1 - Tutoriel
 Suivre le tuto : https://nextjs.org/learn/dashboard-app  
-tout ce qui est destiné a etre une page -> dans le dossier app  
-en général on place dans le layout les parties static de l'app(header+footer)  
+Tout ce qui est destiné a etre une page -> dans le dossier app  
+En général on place dans le layout les parties static de l'app(header+footer)  
 --> créé a l'exterieur du dossier app (par exemple dans un dossier Ui)  
+CLSX -> mise en forme conditionnel.  
+Les composants next sont coté serveur, la directive "useClient" indique un composant comme "client".  
