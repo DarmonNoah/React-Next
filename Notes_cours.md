@@ -10,6 +10,9 @@ rout = Next.js uses a file-system based router where folders are used to define 
 Each folder represents a route segment that maps to a URL segment. To create a nested route, you can nest folders inside each other.  
 app correspond à / et dashboard correspond donc à /dashboard.  
 ![Cours](routes.png "Schéma")  
+Store est une structure qui permet de gérer un gros objet peut importe l'app, méthode de maj et d'action combiné = ce qu'on appel le store.  
+On l'utilise quand passer des données grace aux props est trop contraignant.  
+UseReducer de base est un hook qui permet de gérer l'état d'un composant lorsqu'il devient trop complexe, le store est donc une variable global partagé a toute l'app, un hook d'etat (state) est une variable et une fonction qui permet de la modifier.  
 
 # Partie React
 
@@ -27,17 +30,17 @@ Vite sert a mettre en place son application, rapide et performant, il sert à fa
 ### Infos et Voc Part-1
 En react tous les composants sont des fonctions.  
 Un composant est donc une fonction qui return du JSX.  
-En React "<>" permet de rendre le DOM plu lisible.  
-React mets à jour le DOM avec les hooks.  S
+En React "<>" permet de rendre le DOM plus lisible.  
+React mets à jour le DOM avec les hooks.  
 Hook permet de gérer l'état et le cycle de vie des rendues.  
 Ce sont des fonctions qui commencent par use (convention).  
-On peut utiliser une fonction pour mettre a jour le states.  
+On peut utiliser une fonction hooks pour mettre a jour le states.  
 Cette syntaxe "setName((prev)=>{return prev + "vite";})" est utile quand on veut mettre un state dont la valeur depend de la valeur précédente.  
 Les composants React communiquent entre eux avec des props.  
 Tous les composants peuvent recevoir en parametre des props. 
 Ce sont des objets dont l'utilisation est similaire a celle des attributs html.  
 Les props sont utile lorsqu'on veut passer d'enfant à parents, au dela ils deviennent dépassés.  
-La props "children" est présente dans tous les ocmposants de base.  
+La props "children" est présente dans tous les composants de base elle permet d'accéder aux éléments HTML/JSX dans la balise englobante.
 
 # Consignes TP React
 
@@ -65,10 +68,10 @@ La props "children" est présente dans tous les ocmposants de base.
 (utiliser useReducer au lieu de useState.)  
 
 ### Infos et Voc Part-2
-Useeffect : fait en sorte que quelquechose qui ne provient pas de react marche dans react.  
-Utilité : placer tout ses "sideEffects".  
-Systeme de login pour ne pas utiliser un systeme de props. 
-Hook : fonction mis a disposition part la bibliotheque react qui permet de gérer les cycles de vies de composants react.
+Useeffect : Cela permet à notre composant d'exécuter des actions après l'affichage, en choisissant à quel moment cette action doit être exécutée.  Le hook useEffect est appelé après chaque rendu de votre composant.  
+useEffect est un Hook qui vous permet de synchroniser un composant avec un système externe(useEffect permet donc de placer des"sideEffects").  
+Systeme de login pour ne pas utiliser un systeme de props.  
+Hook : fonction mis a disposition part la bibliotheque react qui permet de gérer les cycles de vies de composants react.  
 L'etat est géré par le hook.  
 Reducer: The reducer function that specifies how the state gets updated. It must be pure, should take the state and action as arguments, and should return the next state. State and action can be of any types.  
 HookUseReducer permet de récupérer le state dans sa version la plus récente.  
