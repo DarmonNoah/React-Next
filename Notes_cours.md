@@ -65,7 +65,49 @@ La props "children" est présente dans tous les composants de base elle permet d
 - [ ] Creer un formulaire qui permet d'ajouter un profil utilisateur à la liste
 - [ ] Trouvez un moyen de filtrer la liste des profils par annee de naissance par exemple  
 (tester useeffect, usecontext et api context.)  
-(utiliser useReducer au lieu de useState.)  
+(utiliser useReducer au lieu de useState.)
+
+## Correction Partie 2
+
+## Le hook useEffect
+
+Le hook useEffect permet d'effectuer des actions à chaque fois que le composant est monté, démonté ou mis à jour.
+
+Il est possible de définir plusieurs useEffect dans un même composant.
+
+```jsx
+import React, { useState, useEffect } from "react";
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("Le composant a été monté");
+  }, []);
+
+  useEffect(() => {
+    console.log("Le composant a été mis à jour");
+  }, [count]);
+
+  useEffect(() => {
+    console.log("Le composant a été monté");
+    return () => {
+      console.log("Le composant a été démonté");
+    };
+  }, []);
+
+  return (
+    <div>
+      <p>Vous avez cliqué {count} fois</p>
+      <button onClick={() => setCount(count + 1)}>Cliquez ici</button>
+    </div>
+  );
+};
+```
+
+## L'api Context et le hook useContext
+
+L'api Context permet de passer des données à travers l'arbre des composants sans avoir à passer par les props.
 
 ### Infos et Voc Part-2
 Useeffect : Cela permet à notre composant d'exécuter des actions après l'affichage, en choisissant à quel moment cette action doit être exécutée.  Le hook useEffect est appelé après chaque rendu de votre composant.  
@@ -128,8 +170,7 @@ Vous pouvez ensuite ouvrir http://localhost:3000 pour voir le résultat.
 # Consignes TP Next
 
 ## Partie 1 - Tutoriel
-Suivre le tuto : https://nextjs.org/learn/dashboard-app  
-https://nextjs.org/learn/dashboard-app/error-handling (j'en suis au chapitre 13)
+Suivre le tuto : https://nextjs.org/learn/dashboard-app
 
 ### Infos et Voc Part-1
 Tout ce qui est destiné a etre une page -> dans le dossier app  
