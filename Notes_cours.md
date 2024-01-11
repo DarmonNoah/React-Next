@@ -172,6 +172,11 @@ Vous pouvez ensuite ouvrir http://localhost:3000 pour voir le résultat.
 ## Partie 1 - Tutoriel
 Suivre le tuto : https://nextjs.org/learn/dashboard-app
 
+## Partie 2 - API
+A partir du projet fourni, mettez en place une api avec Next.js et expliquez comment elle fonctionne :  
+decrivez le systeme de fichier et les conventions de nommage.  
+mettez en place au moins une route  
+
 ### Infos et Voc Part-1
 Tout ce qui est destiné a etre une page -> dans le dossier app  
 En général on place dans le layout les parties static de l'app(header+footer)  
